@@ -21,7 +21,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 torch.cuda.is_available()
 ````
 
-I trained the model on a dataset from [Kaggle](https://www.kaggle.com/sriramr/fruits-fresh-and-rotten-for-classification), the dataset structure is in **Data** folder attached. There are 6 categories of fruits: **Fresh apples**, **Fresh oranges**, **Fresh bananas**, **Rotten apples**, **Rotten oranges**, **Rotten bananas**.
+I trained the model on a dataset from [Kaggle](https://www.kaggle.com/sriramr/fruits-fresh-and-rotten-for-classification), the dataset is linked. There are 6 categories of fruits: **Fresh apples**, **Fresh oranges**, **Fresh bananas**, **Rotten apples**, **Rotten oranges**, **Rotten bananas**.
 This means that my model will require an output layer of 6 neurons to do the categorization successfully. And since I have multiple guesses I cannot use ` BCE `, I used ` Categorical_crossentropy `.
 
 I started with a pretrained model from ImageNet, and I had to load it with the correct weights. Because these pictures are in color, there will be three channels for red, green and blue. Giving the model a new purpose.
